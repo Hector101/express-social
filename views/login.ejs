@@ -1,0 +1,30 @@
+<% include _header %>
+	<h3 class="sign-up-h3">Login</h3>
+
+	<% if(invalidUser.length > 0){ %>
+		<div class="alert alert-danger"><%= invalidUser %></div>
+	<% }else if(invalidPassword.length > 0){ %>
+		<div class="alert alert-danger"><%= invalidPassword %></div>
+	<% } %>
+
+	<form action="/login" method="post" role="form" class="form-horizontal signup-form">
+		<div class="form-container">
+			<div class="form-group">
+				<label for="email" class="control-label">Email: </label>
+				<input type="email" name="email" class="form-control" placeholder="Email" required>
+			</div>
+			<div class="form-group">
+				<label for="password" class="control-label">Password: </label>
+				<input type="password" name="password" class="form-control" placeholder="password" required>
+			</div>
+			<div class="form-group">
+				<label for="password" class="control-label">Remember Me: </label>
+				<input type="checkbox">
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Login" class="btn btn-default">
+			</div>
+		</div>
+	</form>
+
+<% include _footer %>

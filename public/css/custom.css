@@ -1,0 +1,37 @@
+.footer {
+    background: #aaa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
+.signup-form{
+	margin: 0 auto;
+	width: 40%;
+}
+.edit-form{
+	margin: 0 auto;
+	width: 30%;
+}
+.sign-up-h3{
+	margin-left: 10%;
+}
+.alert{
+	text-align: center;
+}
+.save-update{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+@media (max-width: 767px){
+	.navbar-nav {
+		margin: 7.5px -15px;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+	}
+
+}

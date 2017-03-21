@@ -1,0 +1,45 @@
+{
+  "name": "express-social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "browserify": "browserify public/app.js -o public/js/main.js",
+    "build": "npm run browserify",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hector101/express-social.git"
+  },
+  "author": "hector101",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hector101/express-social/issues"
+  },
+  "homepage": "https://github.com/Hector101/express-social#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-enforces-ssl": "^1.1.0",
+    "express-session": "^1.15.1",
+    "forever": "^0.15.3",
+    "helmet": "^3.5.0",
+    "mongoose": "^4.8.6",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "random-color": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "watchify": "^3.9.0"
+  }
+}

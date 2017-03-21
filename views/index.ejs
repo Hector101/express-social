@@ -1,0 +1,29 @@
+<% include _header %>
+	<div class="container">
+		<h2>
+			<% if(currentUser){ %>
+				<%= currentUser.name() %> Welcome to Express Social
+			<% }else{ %>
+				Welcome to Express Social
+			<% } %>
+		</h2>
+		<% users.forEach(function(user){ %> 
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a href="/users/<%= user.username %>"><%= user.name() %></a>
+				</div>
+				<div class="panel-body"> 
+					<% if(user.email){ %>
+						<h6><%= user.email %></h6>
+					<% } %>
+					<% if(user.bio){ %>
+						<h4><%= user.bio %></h4>
+					<% } %>
+				</div>
+				
+			</div>
+
+		<% }) %>
+	</div>
+
+<% include _footer %>

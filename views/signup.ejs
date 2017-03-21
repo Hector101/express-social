@@ -1,0 +1,55 @@
+<% include _header %>
+	<h3 class="sign-up-h3">Sign up</h3>
+	
+	<% if(signUpMessage.length > 0){ %>
+		<div class="alert alert-warning"><%= signUpMessage %></div>
+	<% }else if(wrongPassword.length > 0){ %>
+		<div class="alert alert-danger"><%= wrongPassword %></div>
+	<% }else if(createdAccount.length > 0){ %>
+		<div class="alert alert-success"><%= createdAccount %></div>
+	<% } %>
+	
+
+	<form action="/signup" method="post" role="form" class="signup-form">
+		<div class="form-container">
+			<div class="row">
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<label for="firstname" class="control-label">First Name: </label>
+					<input type="text" name="firstname" class="form-control" placeholder="First Name" required>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<label for="surname" class="control-label">Last Name: </label>
+					<input type="text" name="surname" class="form-control" placeholder="Last Name" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<label for="username" class="control-label">Usernae: </label>
+					<input type="text" name="username" class="form-control" placeholder="Username" required>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<label for="email" class="control-label">Email</label>
+					<input type="email" name="email" class="form-control" placeholder="email address" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<label for="password" class="control-label">Password: </label>
+					<input type="password" name="password" class="form-control" placeholder="password" required>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<label for="password" class="control-label">Re-password: </label>
+					<input type="password" name="password2" class="form-control" placeholder="Re-password" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="control-label">Remember Me: </label>
+				<input type="checkbox">
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Sign up" class="btn btn-default">
+			</div>
+		</div>
+	</form>
+
+<% include _footer %>

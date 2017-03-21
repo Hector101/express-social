@@ -1,0 +1,16 @@
+<% include _header %>
+	<div class="container">
+		<% if((currentUser) && (currentUser.id === user.id)){ %>
+			<a href="/edit" class="btn btn-danger pull-right">Edit Profile</a>
+		<% } %>
+
+		<h1><%= user.name() %></h1>
+		<h6><%= user.createdAt %></h6>
+		<% if(user.email){ %>
+			<h4><%= user.email %></h4>
+		<% } %>
+		<% if(user.bio){ %>
+			<h5><%= user.bio %></h5>
+		<% } %>
+	</div>
+<% include _footer %>
